@@ -17,14 +17,15 @@ public static class Part2
 
         var powers = new List<int>();
 
-        foreach (var t in games)
+        foreach (var game in games)
         {
-            var sets = t.Split(";");
+            var sets = game.Split(";");
             ProcessSets(sets);
 
-            var product = Colors.Values.Aggregate((total, next) => total * next);
+            var power = Colors.Values.Aggregate((total, next) => total * next);
+            powers.Add(power);
+            
             ResetContext();
-            powers.Add(product);
         }
 
         return powers.Sum();

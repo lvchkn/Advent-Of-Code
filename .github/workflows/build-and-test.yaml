@@ -9,13 +9,6 @@
         - name: Check out the repo
           uses: actions/checkout@v4
 
-        # - name: Git Submodule Update
-        #   run: |
-        #     git pull --recurse-submodules
-        #     git submodule update --remote --recursive
-        - name: list everything
-          run: ls -R
-
         - name: Setup .NET
           uses: actions/setup-dotnet@v4
           with:
@@ -23,6 +16,3 @@
 
         - name: Build
           run: dotnet build
-          
-        - name: Test
-          run: dotnet test

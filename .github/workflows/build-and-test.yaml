@@ -13,8 +13,8 @@
         #   run: |
         #     git pull --recurse-submodules
         #     git submodule update --remote --recursive
-        - name: PWD
-          run: pwd && ls -la
+        - name: list everything
+          run: ls -R
 
         - name: Setup .NET
           uses: actions/setup-dotnet@v4
